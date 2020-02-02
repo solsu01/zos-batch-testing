@@ -1,0 +1,10 @@
+#minute(0-59) hour(0-23) day(1-31) month(1-12) weekday(0-6) command
+
+#execute hello.py every hour
+1 * * * * python ~/hello.py
+
+#execute annual-maintenance once a year
+@yearly /home/sujay/rhel/bin/annual-maintenance
+
+#on every reboot
+@reboot /sys/initiate-daemon.sh
