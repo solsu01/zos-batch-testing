@@ -1,0 +1,31 @@
+{
+  "name": "zos-batch-testing",
+  "version": "1.0.0",
+  "description": "zos batch automated testing and jcl scannin",
+  "main": "index.js",
+  "scripts": {
+    "test:unit": "jest __tests__/batchUnitTests/*",
+    "test:component": "jest __tests__/batchComponentsTests/*",
+    "test": "npm run test:unit && npm run test:component",
+    "jclcheck": "zowe jck check lf \"zosBatchSamples/ftp.jcl\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solsu01/zos-batch-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solsu01/zos-batch-testing/issues"
+  },
+  "homepage": "https://github.com/solsu01/zos-batch-testing#readme",
+  "dependencies": {
+    "@types/jest": "^25.1.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.1"
+  }
+}
