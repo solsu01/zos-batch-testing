@@ -4,10 +4,13 @@
   "description": "zos batch automated testing and jcl scannin",
   "main": "index.js",
   "scripts": {
+    "jclcheck:job1": "zowe jck check lf \"zosBatchApplication/badjcl.jcl\"",
+    "jclcheck:job2": "zowe jck check lf \"zosBatchApplication/ftp.jcl\"",
+    "jclcheck:job3": "zowe jck check lf \"zosBatchApplication/mimcopy.jcl\"",
+    "jclcheck:all": "npm run jclcheck:job1 && jclcheck:job2 && jclcheck:job3",
     "test:unit": "jest __tests__/batchUnitTests/*",
     "test:component": "jest __tests__/batchComponentsTests/*",
-    "test": "npm run test:unit && npm run test:component",
-    "jclcheck": "zowe jck check lf \"zosBatchSamples/ftp.jcl\""
+    "test": "npm run test:unit && npm run test:component"
   },
   "repository": {
     "type": "git",
