@@ -6,8 +6,9 @@
   "scripts": {
     "test:unit": "jest __tests__/batchUnitTests/*.ts",
     "test:component": "jest __tests__/batchComponentTests/*.ts",
-    "test:all": "npm run test:unit && npm run test:component",
-    "jclcheck": "zowe jck check lf \"zosBatchApplication/badjcl.jcl\""
+    "test:system:functional": "jest __tests__/batchSystemFunctionalTests/*.ts",
+    "test:all": "npm run test:unit && npm run test:component && npm run test:system:functional",
+    "test:production:sanity": "zowe jck check lf \"zosBatchApplication/badjcl.jcl\""
   },
   "repository": {
     "type": "git",
