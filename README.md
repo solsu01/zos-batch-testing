@@ -1,2 +1,2 @@
 # zos-batch-testing
-Testing zOS Batch Applications using modern automated testing frameworks
+Testing zOS Batch Applications using modern automated testing frameworks and Zowe.
