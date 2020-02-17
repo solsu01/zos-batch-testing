@@ -1,0 +1,21 @@
+//SOLSU01R JOB (123300000),'NDVR SRCH-N-REPL',
+//    MSGCLASS=X,MSGLEVEL=(1,1),NOTIFY=SOLSU01
+//*
+//* Step 1: Copy Loadlib
+//*
+//COPY  EXEC PGM=IEBCOPY
+//SPRJ   DD DISP=SHR,DSN=SOLSU01.MIM.LOAD
+//SOLSU   DD DISP=SHR,DSN=SOLSU01.MIM.PDSE.LOAD
+//SYSPRINT DD SYSOUT=*
+//SYSIN   DD *
+  COPY INDD=((SPRJ,R)),OUTDD=SOLSU
+/*
+//*
+//* Step 2: CREATE USS Directory
+//*
+// SET ESDDIR='/a/PMFKEY/MSME'
+//*                                                                   *
+//MKDIR EXEC PGM=BPXBATCH,
+// PARM='sh umask 0000; mkdir -p -m 775 &ESDDIR'
+//STDOUT  DD SYSOUT=*
+//STDERR  DD SYSOUT=*
