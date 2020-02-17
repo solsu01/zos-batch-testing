@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:unit": "jest __tests__/batchUnitTests/*.ts",
-    "test:component": "jest __tests__/batchComponentsTests/*",
+    "test:component": "jest __tests__/batchComponentTests/*.ts",
     "test:all": "npm run test:unit && npm run test:component",
     "jclcheck": "zowe jck check lf \"zosBatchApplication/badjcl.jcl\""
   },
