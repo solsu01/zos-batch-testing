@@ -15,7 +15,7 @@ describe("functional system test", () => {
         expect(jobout2).toContain('Spool file: STDERR');
     });
     it("should get reports from output viewing tool ca view",() => {
-        const reportcmd = execSync(`zowe cv download  report 17 48Xi49nF19bZ4_DxQEBAQEBAQEBAQEBAQEBAQEBAQED__v_8AAAAAAAAAAAAAAAA`).toString();
+        const reportcmd = execSync(`zowe caview download  report 17 48Xi49nF19bZ4_DxQEBAQEBAQEBAQEBAQEBAQEBAQED__v_8AAAAAAAAAAAAAAAA`).toString();
         console.log(reportcmd);
         const report = fs.readFileSync(`/Users/solsu01/gitproj/zos-batch-testing/TESTREPORT01.txt`).toString();
         expect(report).toContain("VENDOR NAME: JOE'S SUPPLY CO.")
